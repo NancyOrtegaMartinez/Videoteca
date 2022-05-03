@@ -1,0 +1,16 @@
+<ion-grid fixed> 
+  <ion-row>
+    <ion-col>
+        <h3 align="center">{{title}}</h3>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-slides mode="ios" pager="ios">
+<ion-slide  *ngFor="let pelicula of discover">
+<ion-card> 
+   <h1>{{pelicula.title}}</h1>
+   <img class="poster" [src]="pelicula.backdrop_path | imagen">
+</ion-card>
+</ion-slide>
+</ion-slides>
