@@ -1,20 +1,39 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Peliculas
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
- <ion-slides mode="ios" pager="ios">
-   <ion-slide  *ngFor="let pelicula of discover">
+  <app-slides-backdrop [discover]="discover"></app-slides-backdrop>
+  <app-slides-poster [discover]="discover" title="cartelera"></app-slides-poster>
+
+  <!--titulo
+  cuando se le ponen los corchetes es porque recibe una variable , 
+  cuando solo esta el metodo = "" le mandamos el valor directo-->
+
+ <!-- a discover se le manda el arreglo popularity
   
+-->
+  <app-slides-poster [discover]="popularity" title="Peliculas Populares"></app-slides-poster>
+
+
+    <!-- <ion-grid fixed> 
+        <ion-row>
+          <ion-col>
+              <h3 align="center">Películas Recientes</h3>
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+<ion-slides mode="ios" pager="ios">
+   <ion-slide  *ngFor="let pelicula of discover">
      <ion-card> 
          <h1>{{pelicula.title}}</h1>
          <img [src]="pelicula.backdrop_path | imagen">
      </ion-card>
    </ion-slide>
- </ion-slides>
+ </ion-slides> -->
 </ion-content>
