@@ -12,6 +12,7 @@ export class SlidesBackdropComponent implements OnInit {
 
   @Input() discover: Movies[] = [];
 
+
   constructor( private modalController: ModalController) { }
 
   ngOnInit() {}

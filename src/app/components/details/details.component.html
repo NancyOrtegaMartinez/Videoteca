@@ -1,3 +1,30 @@
-<p>
-  details works!
-</p>
+
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>{{ details.title }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+         <ion-slides mode="ios" pager="ios">
+           <ion-slide *ngFor="let actor of credits">
+             <h1>{{ actor.name }}</h1>
+           </ion-slide>
+         </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title>Footer</ion-title>
+      <ion-button (click)="cerrar()" expand="block" fill="clear">
+        Cerrar
+      </ion-button>
+    </ion-toolbar>
+  </ion-footer>
+
+</ion-content>

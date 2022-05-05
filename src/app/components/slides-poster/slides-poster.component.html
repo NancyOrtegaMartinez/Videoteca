@@ -8,7 +8,7 @@
 
 <ion-slides mode="ios" pager="ios">
 <ion-slide  *ngFor="let pelicula of discover">
-<ion-card> 
+<ion-card (click)="showDetails(pelicula.id)"> 
    <h1>{{pelicula.title}}</h1>
    <img class="poster" [src]="pelicula.backdrop_path | imagen">
 </ion-card>
